@@ -3,7 +3,6 @@ package com.lwy.dubboconsumer.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.lwy.pojo.Student;
 import com.lwy.service.StudentScoreService;
-import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +15,6 @@ import java.util.List;
 //@Controller
 @RestController
 @RequestMapping(value = "/student")
-@Slf4j
 public class StudentController {
 
 
@@ -54,7 +52,6 @@ public class StudentController {
     @RequestMapping("/findAll")
     public List<Student> findAll(@RequestParam("key") String key,@RequestParam("value")String value){
 
-        log.info("Slf4j log日志");
         logger.info("进入 findAll 方法  info");
         logger.debug("进入 findAll 方法  debug");
         logger.error("进入 findAll 方法  error");
